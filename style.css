@@ -1,0 +1,71 @@
+body {
+    background-color: #444;
+}
+
+svg {
+    position: absolute;
+    top: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* outline */
+svg rect {
+    stroke: #fff;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: 3s outline 1 forwards;
+}
+
+/* line */
+svg .line {
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: 3s line 1 forwards;
+}
+
+/* fade */
+svg .fade {
+    fill: #fff;
+    opacity: 0;
+    animation: 3s fade 1 forwards;
+    animation-delay: 2.5s;
+
+}
+
+@keyframes outline {
+    from {
+        stroke-dashoffset: 500;
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes line {
+    from {
+        stroke-dashoffset: 100;
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: -70;
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
